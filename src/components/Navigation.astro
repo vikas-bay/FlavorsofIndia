@@ -1,0 +1,32 @@
+---
+import { Astro } from 'astro';
+
+const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === '/' && currentPath === '/') return true;
+  if (href !== '/' && currentPath.includes(href)) return true;
+  return false;
+};
+---
+
+<nav class="flex space-x-8">
+  <a
+    href="/"
+    class={`transition-colors hover:text-saffron ${isActive('/') ? 'text-saffron font-semibold' : 'text-white'}`}
+  >
+    Home
+  </a>
+  <a
+    href="/menu"
+    class={`transition-colors hover:text-saffron ${isActive('/menu') ? 'text-saffron font-semibold' : 'text-white'}`}
+  >
+    Menu
+  </a>
+  <a
+    href="/contact"
+    class={`transition-colors hover:text-saffron ${isActive('/contact') ? 'text-saffron font-semibold' : 'text-white'}`}
+  >
+    Contact
+  </a>
+</nav>

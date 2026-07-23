@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home" description="Welcome to Flavors of India - Authentic Indian Restaurant in Houston, Texas">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-deep-red to-saffron text-white py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold font-serif mb-4">Welcome to Flavors of India</h1>
+      <p class="text-xl mb-8 text-cream">Authentic Indian cuisine in the heart of Houston</p>
+      <div class="flex gap-4 justify-center">
+        <a href="/menu" class="bg-navy hover:bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold transition">
+          View Menu
+        </a>
+        <a href="/contact" class="bg-white hover:bg-cream text-deep-red px-8 py-3 rounded-lg font-semibold transition">
+          Reserve a Table
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold font-serif text-navy mb-6">About Us</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            At Flavors of India, we bring the rich, diverse tastes of India directly to your table.
+            Our chef has over 20 years of experience preparing authentic Indian dishes using traditional recipes
+            and the finest ingredients.
+          </p>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            From aromatic curries to perfectly baked naan bread, every dish is crafted with passion and care.
+            Whether you're a longtime lover of Indian cuisine or trying it for the first time, our welcoming
+            atmosphere and exceptional service ensure a memorable dining experience.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="text-8xl">🏮</div>
+          <p class="text-gray-600 mt-4 text-lg">Experience the magic of Indian cuisine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Dishes Section -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold font-serif text-navy text-center mb-12">Featured Favorites</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Dish 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-5xl mb-4 text-center">🍛</div>
+          <h3 class="text-2xl font-bold font-serif text-navy mb-3">Butter Chicken</h3>
+          <p class="text-gray-600 mb-4">
+            Tender chicken in a creamy tomato sauce with fenugreek leaves. A beloved classic.
+          </p>
+          <p class="text-saffron font-semibold">$15.99</p>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-5xl mb-4 text-center">🥘</div>
+          <h3 class="text-2xl font-bold font-serif text-navy mb-3">Paneer Tikka Masala</h3>
+          <p class="text-gray-600 mb-4">
+            Soft cottage cheese in a rich, aromatic sauce. Perfect for vegetarian diners.
+          </p>
+          <p class="text-saffron font-semibold">$14.99</p>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-5xl mb-4 text-center">🍚</div>
+          <h3 class="text-2xl font-bold font-serif text-navy mb-3">Biryani</h3>
+          <p class="text-gray-600 mb-4">
+            Fragrant rice cooked with spices and your choice of meat or vegetables.
+          </p>
+          <p class="text-saffron font-semibold">$16.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold font-serif text-navy text-center mb-12">Why Choose Flavors of India?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-5xl mb-4">👨‍🍳</div>
+          <h3 class="text-xl font-bold font-serif mb-2 text-navy">Expert Chefs</h3>
+          <p class="text-gray-600">Over 20 years of experience in authentic Indian cuisine</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl mb-4">✨</div>
+          <h3 class="text-xl font-bold font-serif mb-2 text-navy">Fresh Ingredients</h3>
+          <p class="text-gray-600">Premium spices and ingredients sourced directly from India</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl mb-4">❤️</div>
+          <h3 class="text-xl font-bold font-serif mb-2 text-navy">Warm Hospitality</h3>
+          <p class="text-gray-600">Welcoming atmosphere and exceptional customer service</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gradient-to-r from-navy to-deep-red text-white py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold font-serif mb-4">Ready to Experience Authentic Flavors?</h2>
+      <p class="text-lg mb-8">Visit us today and discover your new favorite restaurant</p>
+      <a href="/contact" class="bg-saffron hover:bg-orange-600 text-navy px-8 py-3 rounded-lg font-semibold transition inline-block">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+</Layout>
