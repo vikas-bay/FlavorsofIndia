@@ -8,7 +8,8 @@ A completely **static HTML/CSS/JavaScript** website for Flavors of India, an aut
 ✅ **No Dependencies** - Zero npm packages needed
 ✅ **Fully Responsive** - Works on mobile, tablet, and desktop
 ✅ **Three Pages** - Landing page, menu, and contact page
-✅ **Working Contact Form** - Client-side form with success message
+✅ **Working Contact Form** - Sends submissions to webhook endpoint
+✅ **Webhook Integration** - Automatic form data capture via n8n
 
 ## Pages
 
@@ -38,7 +39,9 @@ A completely **static HTML/CSS/JavaScript** website for Flavors of India, an aut
 - Working contact form
   - Name, Email, Phone, Subject, and Message fields
   - Client-side form validation
+  - Webhook integration to capture form submissions
   - Success message on submission
+  - Graceful error handling with fallback display
 - Map placeholder for future integration
 
 ## File Structure
@@ -110,11 +113,27 @@ Simply edit the menu items in `menu.html`:
 - Change dish names, descriptions, and prices
 - Add or remove menu sections as needed
 
-### Add Backend Integration
-The contact form can be connected to a backend service:
-- EmailJS
-- Formspree
-- Custom backend endpoint
+### Webhook Integration
+The contact form is already integrated with an n8n webhook endpoint to capture form submissions. When users submit the contact form:
+1. Form data is collected (name, email, phone, subject, message, timestamp)
+2. Data is sent via POST request to the webhook URL
+3. User sees a success message
+4. Form is cleared for next submission
+
+**Current Webhook URL:** `https://vikasbayyarapu.app.n8n.cloud/webhook-test/7cd92ab5-d3d0-4240-86f0-6a5e4474362a`
+
+To change the webhook URL, edit the `webhookUrl` variable in the `<script>` section of `contact.html`:
+```javascript
+const webhookUrl = 'YOUR_WEBHOOK_URL_HERE';
+```
+
+### Alternative Backend Integration
+To use a different backend service instead of the webhook:
+- EmailJS - For email notifications
+- Formspree - For form handling
+- Custom API endpoint - For custom backend logic
+
+Replace the webhook integration in `contact.html` with your preferred service.
 
 ## Browser Support
 
