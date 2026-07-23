@@ -233,13 +233,13 @@
                 };
 
                 try {
-                    // Send data to webhook
-                    const response = await fetch(webhookUrl, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(formData)
+                    // Build query string from form data
+                    const queryString = new URLSearchParams(formData).toString();
+                    const urlWithParams = webhookUrl + '?' + queryString;
+
+                    // Send data to webhook using GET method
+                    const response = await fetch(urlWithParams, {
+                        method: 'GET'
                     });
 
                     if (response.ok) {
